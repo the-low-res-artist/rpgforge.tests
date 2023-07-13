@@ -13,7 +13,8 @@ if exist "%TEST_PROJECT_ROOT_PATH%\%TEST_PKG_NAME%" del "%TEST_PROJECT_ROOT_PATH
 
 :: =================================================================================================
 :: Build package
-set OPTIONS=-projectPath "%TEST_PROJECT_ROOT_PATH%" -exportPackage Assets\Tests %TEST_PKG_NAME% -quit
+set ARGS=-projectPath "%TEST_PROJECT_ROOT_PATH%" -exportPackage Assets\Tests %TEST_PKG_NAME% -quit
+echo "%UNITY_EXE%" %ARGS%
 "%UNITY_EXE%" %ARGS%
 
 :: =================================================================================================
